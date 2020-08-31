@@ -1,0 +1,230 @@
+/*custom font*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {margin: 0; padding: 0;}
+html {
+height: 100%;
+
+}
+body {
+font-family: montserrat, arial, verdana;
+background:#FFFFFF;
+}
+/*form styles*/
+#msform {
+width: 400px;
+margin: 50px auto;
+text-align: center;
+position: relative;
+}
+#msform fieldset {
+background: white;
+border: 0 none;
+border-radius: 3px;
+box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+padding: 20px 30px;
+box-sizing: border-box;
+width: 100%;
+/*stacking fieldsets above each other*/
+position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+display: none;
+}
+/*inputs*/
+#msform input, #msform textarea {
+padding: 15px;
+border: 1px solid #ccc;
+border-radius: 3px;
+margin-bottom: 10px;
+width: 100%;
+box-sizing: border-box;
+font-family: montserrat;
+color: #2C3E50;
+font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+width: 100px;
+background: #27AE60;
+font-weight: bold;
+color: white;
+border: 0 none;
+border-radius: 1px;
+cursor: pointer;
+padding: 10px 5px;
+margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+/*headings*/
+.fs-title {
+font-size: 15px;
+text-transform: uppercase;
+color: #2C3E50;
+margin-bottom: 10px;
+}
+.fs-subtitle {
+font-weight: normal;
+font-size: 13px;
+color: #666;
+margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+margin-bottom: 30px;
+overflow: hidden;
+/*CSS counters to number the steps*/
+counter-reset: step;
+}
+#progressbar li {
+list-style-type: none;
+color: #000000;
+text-transform: uppercase;
+font-size: 9px;
+width: 33.33%;
+float: left;
+position: relative;
+}
+#progressbar li:before {
+content: counter(step);
+counter-increment: step;
+width: 20px;
+line-height: 20px;
+display: block;
+font-size: 10px;
+color: #333;
+background: lightgray;
+border-radius: 3px;
+margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+content: '';
+width: 100%;
+height: 2px;
+background: black;
+position: absolute;
+left: -50%;
+top: 9px;
+z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+/*connector not needed before the first step*/
+content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+background: #27AE60;
+color: white;
+}
+/* registration header css starts */
+
+body{
+   /*padding:50px;*/
+   height:0%;
+}
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0;
+    overflow:hidden;
+    background-color:rgba(255,255,255,.8);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+#login-dp .social-buttons{
+    margin:12px 0    
+}
+#login-dp .social-buttons a{
+    width: 49%;
+}
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+.btn-fb{
+    color: #fff;
+    background-color:#3b5998;
+}
+.btn-fb:hover{
+    color: #fff;
+    background-color:#496ebc 
+}
+.btn-tw{
+    color: #fff;
+    background-color:#55acee;
+}
+.btn-tw:hover{
+    color: #fff;
+    background-color:#59b5fa;
+}
+.header-h3
+{
+	float:left;
+	margin-top:30px;	
+	color: #9d9d9d;
+}
+.logo
+{
+	float:left;
+	height:80px; 	
+}
+.dropdown-toggle
+{
+	line-height:50px !important;	
+}
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+ /* ends */
+/* common header css starts */
+
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size
+{
+    font-size: 87px;
+}
+
+/* common header css ends */
+
+/* breadcrums header css starts */
+.breadcrumb>li+li:before {
+    padding: 0 5px;
+    color: #ccc;
+    content: ">" !important;
+}
+
+/* breadcrums header css ends */
+
+
